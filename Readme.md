@@ -9,6 +9,9 @@
 * [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
 <!-- default file list end -->
 # How to drop an appointment from ASPxScheduler to an external control
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4708/)**
+<!-- run online end -->
 
 
 <p>This example illustrates how to drag and drop appointment info outside the ASPxScheduler area. The main difficulty of implementing this functionality is that the capability to drag appointments within the ASPxScheduler is built-in (see <a href="http://documentation.devexpress.com/#AspNet/CustomDocument3823">Appointments</a>) and can conflict with our implementation. Of course, we can disable this capability by setting the <a href="http://documentation.devexpress.com/#CoreLibraries/DevExpressXtraSchedulerSchedulerOptionsCustomization_AllowAppointmentDragtopic">SchedulerOptionsCustomization.AllowAppointmentDrag Property</a> to the <strong>UsedAppointmentType.None</strong> value. However, it is not an elegant solution. Instead, we will add a special "Drag panel" DIV to an appointment template (see <a href="http://documentation.devexpress.com/#AspNet/CustomDocument4220">How to: Customize Appointment Appearance via Templates</a>) and disable the built-in drag-and-drop functionality in its client-side <strong>onmousedown </strong>event handler by executing the following code:<br><br></p>
